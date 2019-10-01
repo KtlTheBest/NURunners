@@ -50,6 +50,12 @@ w.java -> Vector2D.java
     ======
     | public w(double a, double b) -> public Vector2D(double x, double y)
     | public void a(w w) -> public void set(Vector2D v)
+    | public void b(w w) -> public void plus(Vector2D other)
+    | public double a(w w) -> public double distanceTo(Vector2D other)
+    | public w a() -> public Vector2D normalize()
+    | public w a(w w) -> public Vector2D plus(Vector2D other)
+    | public w b(w w) -> public Vector2D minus(Vector2D other)
+    | public w a(double n) -> public Vector2D scale(double n)
 x.java -> ZigZag.java
     | private int a -> private int something
     | private int b -> private int don't know
