@@ -5,11 +5,16 @@ a.java -> Speaker.java
     | @Override
     | public final void a -> public void draw(Graphics2D g2d)
 e.java -> Common.java
-    | public int a ->
-    | public int b ->
+    | public int a -> windowWidth
+    | public int b -> windowHeight
     | public v a -> public UniversityMap map
     | public List a -> public List <Student> students
-    | public Lisb b -> public List <
+    | public List b -> public List <Speaker> speakers
+    ======
+    | public int a(n, n2) -> public int randomInt(from, to)
+    | private w a(int a) -> generateAssignment?
+    | private w a() -> really got no idea
+    | private s a() -> private State generateNewAssignment()
 f.java -> Display.java
     | private e a -> public Common common
     ======
@@ -22,6 +27,16 @@ g.java -> Entity.java
     | public e a -> public Common common
     ======
     | public abstract void a -> public abstract void draw()
+q.java -> Rest.java
+    | private int a -> private int restCounter
+r.java -> Speaker.java
+    | private int a -> private int imageWidth
+    | private int b -> private int imageHeight
+    | private BufferedImage a -> private BufferedImage profilePicture
+    ======
+    | public r(String s, w w, s s2, e e, String pathname)
+    | @Override
+    | public void a(Graphics2D graphics2d) -> public void draw(Graphics2D g2d)
 s.java -> State.java
     | private boolean a -> isOver
     | public boolean b -> isVisible
@@ -32,6 +47,13 @@ v.java -> UniversityMap.java
 w.java -> Vector2D.java
     | double a -> double x
     | double b -> double y
+    ======
+    | public w(double a, double b) -> public Vector2D(double x, double y)
+    | public void a(w w) -> public void set(Vector2D v)
+x.java -> ZigZag.java
+    | private int a -> private int something
+    | private int b -> private int don't know
+    | private Vector2D w -> private Vector2D pos
 
 NURunner.java -> NURunner.java
     |
