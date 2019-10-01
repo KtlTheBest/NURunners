@@ -1,0 +1,37 @@
+a.java -> Speaker.java
+    | private int a -> imageWidth
+    | private int b -> imageHeight
+    ======
+    | @Override
+    | public final void a -> public void draw(Graphics2D g2d)
+e.java -> Common.java
+    | public int a ->
+    | public int b ->
+    | public v a -> public UniversityMap map
+    | public List a -> public List <Student> students
+    | public Lisb b -> public List <
+f.java -> Display.java
+    | private e a -> public Common common
+    ======
+    | getPrefferedSize() -> obvious I think
+    | paintComponent(Graphics g) -> obvious I think
+g.java -> Entity.java
+    | public String a -> public String name
+    | public w a -> public Vector2D position
+    | public s a -> public State state
+    | public e a -> public Common common
+    ======
+    | public abstract void a -> public abstract void draw()
+s.java -> State.java
+    | private boolean a -> isOver
+    | public boolean b -> isVisible
+    ======
+    | abstract method a(g p0) -> abstract step(Entity e)
+    | constructor -> obvious I think
+v.java -> UniversityMap.java
+w.java -> Vector2D.java
+    | double a -> double x
+    | double b -> double y
+
+NURunner.java -> NURunner.java
+    |
