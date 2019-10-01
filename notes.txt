@@ -4,12 +4,22 @@ a.java -> Speaker.java
     ======
     | @Override
     | public final void a -> public void draw(Graphics2D g2d)
+b.java -> Assessment.java
+    | public int a -> public int points
+    ======
+    | public b(String s, w w, s s2, e, a)
+c.java -> AssessmentFactory.java
+    | public e a -> public Common common
+    | public abstract b a(w p0) -> public abstract Assessment createAssessment(Vector2D position)
 e.java -> Common.java
+    | private int c -> private int numOfStudents
+    | public boolean a -> public boolean timeToGraduate
     | public int a -> windowWidth
     | public int b -> windowHeight
     | public v a -> public UniversityMap map
     | public List a -> public List <Student> students
     | public List b -> public List <Speaker> speakers
+    | public s a -> public State stateOfCommon
     ======
     | public int a(n, n2) -> public int randomInt(from, to)
     | private w a(int a) -> generateAssignment?
@@ -18,6 +28,7 @@ e.java -> Common.java
 f.java -> Display.java
     | private e a -> public Common common
     ======
+    | public f(e a) -> public Display(Common common)
     | getPrefferedSize() -> obvious I think
     | paintComponent(Graphics g) -> obvious I think
 g.java -> Entity.java
@@ -27,6 +38,9 @@ g.java -> Entity.java
     | public e a -> public Common common
     ======
     | public abstract void a -> public abstract void draw()
+j.java ->
+l.java ->
+n.java -> KeyCatcher.java
 q.java -> Rest.java
     | private int a -> private int restCounter
 r.java -> Speaker.java
@@ -37,12 +51,14 @@ r.java -> Speaker.java
     | public r(String s, w w, s s2, e e, String pathname)
     | @Override
     | public void a(Graphics2D graphics2d) -> public void draw(Graphics2D g2d)
+p.java ->
 s.java -> State.java
     | private boolean a -> isOver
     | public boolean b -> isVisible
     ======
     | abstract method a(g p0) -> abstract step(Entity e)
     | constructor -> obvious I think
+t.java -> Stationary.java
 v.java -> UniversityMap.java
 w.java -> Vector2D.java
     | double a -> double x
@@ -62,4 +78,6 @@ x.java -> ZigZag.java
     | private Vector2D w -> private Vector2D pos
 
 NURunner.java -> NURunner.java
-    |
+    | public JFrame a -> public JFrame window
+    | private f a -> public Display display
+    | private e a -> public Common common
