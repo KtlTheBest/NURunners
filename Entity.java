@@ -1,12 +1,16 @@
+import java.awt.*;
+
 public abstract class Entity {
     public String name;
     public Vector2D position;
     public State state;
     public Common common;
 
-    abstract draw(Graphics2D g2d);
+    public abstract draw(Graphics2D g2d);
 
-    public void step();
+    public void step(){
+        state.step();
+    }
 
     public draw(Graphics2D g2d);
 

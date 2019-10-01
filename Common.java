@@ -17,7 +17,18 @@ public class Common {
     }
 
     public stepAllEntities(){
-        // I think this one is easy too
+        for(Entity e : academicians){
+            e.step();
+        }
+        for(Entity e : speakers){
+            e.step();
+        }
+        for(Entity e : students){
+            e.step();
+        }
+        for(Entity e : assessments){
+            e.step();
+        }
     }
 
     public drawAllEntitites(){
