@@ -2,7 +2,9 @@ public abstract class State {
     public bool isOver;
     public bool isVisible;
 
-    abstract step(Entity e);
+    void abstract step(Entity e);
+
+    String abstract toString();
 
     public State(){
         isOver = false;
