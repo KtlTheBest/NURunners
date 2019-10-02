@@ -40,6 +40,24 @@ public class Common {
         return rand().nextInt(to) + from;
     }
 
+    private State getRandomState(){
+        int randInt = this.randomInt(1, 4);
+        switch(randInt){
+            case 1: {
+                return new Rest(randomInt(30, 50));
+            }
+            case 2: {
+                return new ZigZag(); // need to finish this one
+            }
+            case 3: {
+                return new GotoXY(, randomInt(2, 5)); // need to find what goes to first argument
+            }
+            case 4: {
+                return new ; // need to finish this one
+            }
+        }
+    }
+
     public stepAllEntities(){
         for(Entity e : academicians){
             e.step();

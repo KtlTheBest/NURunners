@@ -17,6 +17,11 @@ public class Vector2D {
         this.y = v.y;
     }
 
+    public void add(Vector2D v){
+        this.x += v.x;
+        this.y += v.y;
+    }
+
     public double distanceTo(Vector2D other){
         return Math.sqrt((other.x - this.x) * (other.x - this.x) + (other.y - this.y) * (other.y - this.y));
     }
@@ -39,5 +44,9 @@ public class Vector2D {
         double newX = this.x - other.x;
         double newY = this.y - other.y;
         return new Vector2D(newX, newY);
+    }
+
+    public Vector2D scale(int rate){
+        return new Vector2D(this.x * rate, this.y * rate);
     }
 }

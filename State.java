@@ -1,10 +1,10 @@
 public abstract class State {
-    public bool isOver;
-    public bool isVisible;
+    public boolean isOver;
+    public boolean isVisible;
 
-    void abstract step(Entity e);
+    public abstract void step(Entity e);
 
-    String abstract toString();
+    public abstract String toString();
 
     public State(){
         isOver = false;
