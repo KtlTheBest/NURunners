@@ -10,7 +10,14 @@ b.java -> Assessment.java
     | public b(String s, w w, s s2, e, a)
 c.java -> AssessmentFactory.java
     | public e a -> public Common common
+    ======
     | public abstract b a(w p0) -> public abstract Assessment createAssessment(Vector2D position)
+d.java -> Closest.java
+    | private int a -> private int fuel
+    | private int b -> private int assignmentsTillNext
+    ======
+    | @Override
+    | public void a -> public void step()
 e.java -> Common.java
     | private int c -> private int numOfStudents
     | public boolean a -> public boolean timeToGraduate
@@ -57,8 +64,11 @@ s.java -> State.java
     | public boolean b -> isVisible
     ======
     | abstract method a(g p0) -> abstract step(Entity e)
-    | constructor -> obvious I think
 t.java -> Stationary.java
+u.java -> Student.java
+    | public int a -> public int grade
+    ======
+    | public void a(Graphics2D graphics2d) -> public void draw(Graphics2D g2d)
 v.java -> UniversityMap.java
 w.java -> Vector2D.java
     | double a -> double x
@@ -66,7 +76,7 @@ w.java -> Vector2D.java
     ======
     | public w(double a, double b) -> public Vector2D(double x, double y)
     | public void a(w w) -> public void set(Vector2D v)
-    | public void b(w w) -> public void plus(Vector2D other)
+    | public void b(w w) -> public void add(Vector2D other)
     | public double a(w w) -> public double distanceTo(Vector2D other)
     | public w a() -> public Vector2D normalize()
     | public w a(w w) -> public Vector2D plus(Vector2D other)
