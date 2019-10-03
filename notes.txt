@@ -1,6 +1,7 @@
-a.java -> Speaker.java
+a.java -> Academician.java
     | private int a -> imageWidth
     | private int b -> imageHeight
+    | private BufferedImage a -> private BufferedImage image
     ======
     | @Override
     | public final void a -> public void draw(Graphics2D g2d)
@@ -24,12 +25,15 @@ e.java -> Common.java
     | public int a -> windowWidth
     | public int b -> windowHeight
     | public v a -> public UniversityMap map
-    | public List a -> public List <Student> students
+    | public List a -> public List <Academician> academicians
     | public List b -> public List <Speaker> speakers
+    | public List c -> public List <Student> students
+    | public List d -> public List <Assessment> assessments
+    | public List e -> public List <AssessmentFactory> assessmentFactories
     | public s a -> public State stateOfCommon
     ======
     | public int a(n, n2) -> public int randomInt(from, to)
-    | private w a(int a) -> generateAssignment?
+    | private w a(int a) -> positionFromBorder
     | private w a() -> really got no idea
     | private s a() -> private State generateNewAssignment()
 f.java -> Display.java
@@ -45,9 +49,15 @@ g.java -> Entity.java
     | public e a -> public Common common
     ======
     | public abstract void a -> public abstract void draw()
-j.java ->
-l.java ->
+h.java -> GotoXY.java
+i.java -> Homework.java
+j.java -> HomeWorkFactory.java
+k.java -> Lab.java
+l.java -> LabFactory.java
+m.java -> ???
 n.java -> KeyCatcher.java
+o.java -> Quiz.java
+p.java -> QuizFactory.java
 q.java -> Rest.java
     | private int a -> private int restCounter
 r.java -> Speaker.java
@@ -58,7 +68,6 @@ r.java -> Speaker.java
     | public r(String s, w w, s s2, e e, String pathname)
     | @Override
     | public void a(Graphics2D graphics2d) -> public void draw(Graphics2D g2d)
-p.java ->
 s.java -> State.java
     | private boolean a -> isOver
     | public boolean b -> isVisible
