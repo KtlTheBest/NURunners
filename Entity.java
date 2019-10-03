@@ -6,13 +6,18 @@ public abstract class Entity {
     public State state;
     public Common common;
 
-    public abstract draw(Graphics2D g2d);
-
-    public void step(){
-        state.step();
+    public Entity(String name, Vector2D position, State state, Common common){
+        this.name = name;
+        this.position = position;
+        this.state = state;
+        this.common = common;
     }
 
-    public draw(Graphics2D g2d);
+    public abstract void draw(Graphics2D g2d);
+
+    public void step(){
+        state.step(this);
+    }
 
     // think if you can extend graphics
 }

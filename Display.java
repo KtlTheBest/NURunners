@@ -9,7 +9,7 @@ import java.awt.Dimension;
 import java.awt.Color;
 import javax.swing.JPanel;
 
-public abstract class Display extends JPanel {
+public class Display extends JPanel {
     private Common common;
 
     public Display(Common common){
@@ -19,7 +19,7 @@ public abstract class Display extends JPanel {
 
     @Override
     public Dimension getPreferredSize(){
-        return new Dimension(common.width, common.height);
+        return new Dimension(common.windowWidth, common.windowHeight);
     }
 
     public void paintComponent(Graphics g){
@@ -27,24 +27,31 @@ public abstract class Display extends JPanel {
         Graphics2D g2d = (Graphics2D) g;
         common.map.draw(g2d);
         if(common.timeToGraduate){
-            Iterator iterator = common.speakers.iterator();
-            while(iterator.hasNext()){
-                iterator.next().draw(g2d);
+            for(Speaker s : common.speakers){
+                s.draw(g2d);
             }
             Font font = g2d.getFont();
             g2d.setFont(new Font("Sans Serif", 1, 14));
             FontMetrics fontMetrics = g2d.getFontMetrics();
             AffineTransform transform = g2d.getTransform();
             String str = "Graduation Ceremony";
-            g2d.translate((int)common.positionOfCommon.x, (int).common.positionOfCommon.y + 70);
+            g2d.translate((int)common.position.x, (int)common.position.y + 70);
             g2d.setPaint(Color.BLACK);
             g2d.drawString(str, (int)(-fontMetrics.stringWidth(str) / 2.0), 0);
             g2d.setTransform(transform);
             g2d.setFont(font);
-            // do something that has to do with graduation
         } else {
-            Iterator iterator = common.
+            for(Assessment a : common.assessments){
+                a.draw(g2d);
+            }
         }
-        // think what this method does
+
+        for(Student s : common.students){
+            s.draw(g2d);
+        }
+
+        for(Academician a : common.academicians){
+            a.draw(g2d);
+        }
     }
 }

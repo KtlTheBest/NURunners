@@ -1,6 +1,6 @@
 import java.awt.KeyEventDispatcher;
 import java.awt.KeyboardFocusManager;
-import javax.swing.SwingUtilitites;
+import javax.swing.SwingUtilities;
 import java.awt.Component;
 import javax.swing.JFrame;
 
@@ -12,20 +12,19 @@ public class NURunner {
     public static boolean paused;
 
     private NURunner(String projectName, int width, int height, int numOfStudents){
-        window = new JFrame(name + "Oracle");
+        window = new JFrame(projectName + "Oracle");
         common = new Common(numOfStudents, width, height);
         display = new Display(common);
-        display.add(jframe);
+        display.add(window);
     }
 
     public static void main(String args[]){
-        // your code must go in here... but what?
         paused = false;
         String projectName = "NU Graduation";
         int numOfStudents = 10;
         int width = 1200;
         int height = 600;
-        System.out.println(str + "Oracle");
+        System.out.println(projectName + " by Oracle");
         System.out.println();
         // Finish parsing command line arguments System.out.println("")
 
@@ -33,13 +32,26 @@ public class NURunner {
         if (args.length >= 3) width = Integer.parseInt(args[1]);
         if (args.length >= 1) numOfStudents = Integer.parseInt(args[0]);
 
-        KeyBoardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(
+        KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(
                 new KeyCatcher()// n()
                 );
         System.out.println("Press P to play/pause");
         System.out.println("Press Q to quit");
         System.out.println();
 
-        NURunner nuRunner = new NURunner(projectName, )
+        NURunner nuRunner = new NURunner(projectName, width, height, numOfStudents);
+        while(true){
+            if(!NURunner.paused){
+                nuRunner.common.stepAllEntities();
+                nuRunner.display.repaint();
+            }
+
+            try{
+                Thread.sleep(50L);
+            } catch (InterruptedException e) {
+                System.exit(0);
+            }
+            
+        }
     }
 }

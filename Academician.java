@@ -10,12 +10,12 @@ import javax.imageio.ImageIO;
 import java.io.File;
 import java.awt.image.BufferedImage;
 
-public class Speaker extends Entity {
+public class Academician extends Entity {
     private int imageWidth;
     private int imageHeight;
     private BufferedImage image;
 
-    public Speaker(String name, Vector2D position, State state, Common common, String pathToImage){
+    public Academician(String name, Vector2D position, State state, Common common, String pathToImage){
         super(name, position, state, common);
         image = ImageIO.read(new File(pathToImage));
         imageWidth = image.getWidth() / 4;
@@ -32,6 +32,8 @@ public class Speaker extends Entity {
         g2d.drawImage(image, -imageWidth / 2, -imageHeight / 2, imageWidth, imageHeight, null);
         g2d.setPaint(Color.BLACK);
         g2d.drawString(name, (int)(-fontMetrics.stringWidth(name) / 2.0) + 1, -imageHeight / 2 - 2);
+        String stateName = state.toString();
+        g2d.drawString(stateName, (int)(-fontMetrics.stringWidth(stateName) / 2.0) + 1, imageHeight / 2 + 12);
         g2d.setTransform(transform);
         g2d.setFont(font);
     }
