@@ -12,10 +12,15 @@ public class NURunner {
     public static boolean paused;
 
     private NURunner(String projectName, int width, int height, int numOfStudents){
-        window = new JFrame(projectName + "Oracle");
+        window = new JFrame(projectName + " by Oracle");
         common = new Common(numOfStudents, width, height);
         display = new Display(common);
-        display.add(window);
+        window.add(display);
+        window.setLocationByPlatform(true);
+        window.setResizable(false);
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.pack();
+        SwingUtilities.invokeLater(new AWTThread(this));
     }
 
     public static void main(String args[]){

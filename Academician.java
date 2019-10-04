@@ -8,6 +8,7 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.io.IOException;
 import java.awt.image.BufferedImage;
 
 public class Academician extends Entity {
@@ -17,7 +18,11 @@ public class Academician extends Entity {
 
     public Academician(String name, Vector2D position, State state, Common common, String pathToImage){
         super(name, position, state, common);
-        image = ImageIO.read(new File(pathToImage));
+        try{
+            image = ImageIO.read(new File(pathToImage));
+        } catch (IOException e){
+
+        }
         imageWidth = image.getWidth() / 4;
         imageHeight = image.getHeight() / 4;
     }

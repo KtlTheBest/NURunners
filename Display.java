@@ -26,7 +26,7 @@ public class Display extends JPanel {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
         common.map.draw(g2d);
-        if(common.timeToGraduate){
+        if(common.graduated){
             for(Speaker s : common.speakers){
                 s.draw(g2d);
             }
@@ -35,7 +35,7 @@ public class Display extends JPanel {
             FontMetrics fontMetrics = g2d.getFontMetrics();
             AffineTransform transform = g2d.getTransform();
             String str = "Graduation Ceremony";
-            g2d.translate((int)common.position.x, (int)common.position.y + 70);
+            g2d.translate((int)common.amphitheater.x, (int)common.amphitheater.y + 70);
             g2d.setPaint(Color.BLACK);
             g2d.drawString(str, (int)(-fontMetrics.stringWidth(str) / 2.0), 0);
             g2d.setTransform(transform);

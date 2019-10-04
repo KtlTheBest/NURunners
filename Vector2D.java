@@ -27,7 +27,7 @@ public class Vector2D {
     }
 
     public Vector2D normalize(){
-        double distance = distanceTo(new Vector(0, 0));
+        double distance = distanceTo(new Vector2D(0, 0));
         double newX = x / distance;
         double newY = y / distance;
         Vector2D v = new Vector2D(newX, newY);

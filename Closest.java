@@ -13,20 +13,20 @@ public class Closest extends State {
 
     @Override
     public void step(Entity e){
-        Assessment closest;
+        Assessment closest = null;
         double mn = Double.MAX_VALUE;
-        for(Assessment assessment : e.assessments){
+        for(Assessment assessment : e.common.assessments){
             double dist = e.position.distanceTo(assessment.position);
             if(dist < mn){
                 mn = dist;
-                closest = assignment;
+                closest = assessment;
             }
         }
         if(closest != null){
             if(mn < fuel){
                 e.position.set(closest.position);
             } else {
-                e.position.add(closest.position.minus(e.position).normilize().scale(fuel));
+                e.position.add(closest.position.minus(e.position).normalize().scale(fuel));
             }
         }
 
