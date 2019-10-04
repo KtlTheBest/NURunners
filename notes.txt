@@ -35,7 +35,8 @@ e.java -> Common.java
     | public int a(n, n2) -> public int randomInt(from, to)
     | private w a(int a) -> positionFromBorder
     | private w a() -> really got no idea
-    | private s a() -> private State generateNewAssignment()
+    | private s a() -> private State newPersonState()
+    | private s b() -> private State newStudentState()
 f.java -> Display.java
     | private e a -> public Common common
     ======
