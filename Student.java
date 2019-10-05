@@ -32,7 +32,8 @@ public class Student extends Entity {
         g2d.drawOval(-15, -15, 30, 30);
 
         g2d.drawString(name, (int)(-fontMetrics.stringWidth(name) / 2.0) + 1, -18);
-        g2d.drawString(name, (int)(-fontMetrics.stringWidth(name) / 2.0) + 1, 6);
+        String gradeString = Integer.toString(grade);
+        g2d.drawString(gradeString, (int)(-fontMetrics.stringWidth(gradeString) / 2.0) + 1, 6);
 
         String stateName = state.toString();
         g2d.drawString(stateName, (int)(-fontMetrics.stringWidth(stateName) / 2.0) + 1, 30);

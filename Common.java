@@ -177,7 +177,7 @@ public class Common {
                 a.position = amphitheater.plus(new Vector2D(-150 + i * 100, -120));
                 a.state = this.state;
             }
+            graduated = true;
         }
-        graduated = true;
     }
 }

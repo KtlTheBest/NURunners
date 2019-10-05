@@ -20,6 +20,6 @@ public class UniversityMap extends Entity {
 
     @Override
     public void draw(Graphics2D g2d){
-        g2d.drawImage(background, 0, 0, null);
+        g2d.drawImage(background, 0, 0, common.windowWidth, common.windowHeight, null);
     }
 }
