@@ -33,7 +33,7 @@ public class Common {
         state = new Stationary();
         amphitheater = new Vector2D(windowWidth * 564 / 800, windowHeight * 326 / 400);
 
-        studentNames = new String[] {"Abay", "Abilda", "Aldamzhar", "Danel", "Maxim", "Meirzhan", "Sherkhan", "Dnislam", "Anuar", "Temirzhan"};
+        studentNames = new String[] {"Abay", "Abilda", "Abilkhaiyr", "Ablan", "Abylaikhan", "Adil", "Adilzhan", "Adlet", "Aidana", "Aidyn", "Aigerim", "Aisana", "Akhmed", "Akmyrza", "Alan", "Aldamzhar", "Alexandra", "Ali", "Alibek", "Alim", "Alisher", "Allan", "Altair", "Altynay", "Altynbek", "Amangeldy", "Amina", "Anel", "Angsar", "Anuar", "Ardan", "Arman", "Askhat", "Assanali", "Assem", "Ayazhan", "Azamat", "Azizkhan", "Bagdat", "Baglan", "Bakdaulet", "Bakdauren", "Bakyt", "Batyrbek", "Batyrkhan", "Bauyrzhan", "Beibarys", "Bekzat", "Bota", "Damir", "Dana", "Danel", "Daniyar", "Darina", "Dastan", "Daulet", "Dauren", "Dnislam", "Dulat", "Eldar", "Emir", "Galym", "Gulnaz", "Islam", "Kamila", "Kamilla", "Karim", "Kassym", "Khadisha", "Khafiz", "Kuanysh", "Kyran", "Madi", "Madiyar", "Magzhan", "Makhambet", "Mansur", "Margulan", "Maxim", "Medet", "Meirzhan", "Miras", "Mokhira", "Murat", "Nargiza", "Nartay", "Nuradil", "Nurbolat", "Nurdaulet", "Nurlan", "Nursultan", "Nurtileu", "Olzhas", "Rabbani", "Raiymbek", "Rakhat", "Ramazan", "Ramilya", "Rauan", "Rollan", "Rustem", "Sabyr", "Sagi", "Saidgaffor", "Saken", "Salavat", "Sandugash", "Sanzhar", "Shapagat", "Sherkhan", "Shynggys", "Shyngys", "Tatyana", "Temirlan", "Temirzhan", "Timur", "Togzhan", "Tomiris", "Turgankhan", "Vladislav", "Yeldos", "Yerkali", "Yerkhan", "Yermek", "Yernar", "Yerzhan", "Yussup", "Zarina", "Zhalgas", "Zhanarys", "Zhandos", "Zhangeldi", "Zhannur", "Zhansaya", "Zhassulan", "Zhibek", "Zhuldyz"};
         map = new UniversityMap("NU", new Vector2D(0.0, 0.0), new Stationary(), this, "NUMap-Faded.jpg");
         academicians          = new ArrayList <Academician>      ();
         speakers              = new ArrayList <Speaker>          ();
@@ -63,7 +63,7 @@ public class Common {
         speakers.add(Nazarbayev);
 
         for(int i = 0; i < numOfStudents; ++ i){
-            students.add(new Student(studentNames[randomInt(0, 9)], randomPositionFromBorder(15), newStudentState(), this));
+            students.add(new Student(studentNames[randomInt(0, studentNames.length - 1)], randomPositionFromBorder(15), newStudentState(), this));
         }
     }
 
@@ -154,7 +154,7 @@ public class Common {
                     student.state = newStudentState();
                 } else
                 if(student.position.distanceTo(amphitheater) <= 25.0){
-                    student.position = amphitheater;
+                    student.state = state;
                 } else {
                     Vector2D newStudentPosition = amphitheater.plus(
                             new Vector2D(randomInt(-10, 10), randomInt(-10, 10))
